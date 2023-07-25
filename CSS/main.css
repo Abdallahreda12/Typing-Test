@@ -1,0 +1,241 @@
+:root{
+    --main-color:#1892a2;
+    --second-color:#386ac0
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*start top*/
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    padding: 10px 5px 10px 10px;
+    height: 45px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.reload{
+    border: 3px solid black;
+    padding: 5px;
+    margin-right: 7px;
+    background-color: var(--second-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+/*end top*/
+
+/*start container*/
+.container{
+    width: 75%;
+    margin: 10px auto;
+    border: 3px solid  var(--second-color);
+}
+
+.container .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid  var(--second-color);
+    padding: 5px;
+    font-size: 17px;
+    height: 35px;
+}
+
+.container .body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .body .word{
+    width: 100%;
+    height: 135px;
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+    text-transform: capitalize; 
+}
+
+.container .body .input{
+    width: 98%;
+    height: 40px;
+    border: 2px solid var(--second-color);
+    color: var(--main-color);
+    font-size: 25px;
+    text-align: center;
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+
+.container .body .input:focus{
+    outline: none;
+}
+
+.container .body .all-words{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    border: 2px solid var(--second-color);
+    margin: 10px;
+    border-radius: 3px;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+}
+
+.body .all-words .words{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 135px;
+    background-color: var(--second-color);
+    margin: 5px;
+    height: 25px;
+    border-radius: 6px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.container .tail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 3px solid var(--second-color);
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    height: 35px;
+}
+
+.container .tail .counter span,
+.container .tail .current-score{
+    color: var(--main-color);
+}
+@media (max-width:700px) {
+   .container .body .word{
+      font-size: 50px;
+   }
+}
+
+@media (max-width:530px) {
+   .container .body .word{
+      font-size: 40px;
+   }
+   .container .body .input{
+      font-size: 20px;
+   }
+}
+
+@media (max-width:380px) {
+   .container .body .word{
+      font-size: 30px;
+   }
+   .container .body .input{
+       font-size: 16px;
+    }
+}
+/*end container*/
+
+/*start button*/
+.button{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button span{
+    width: 110px;
+    background-color: #008eff;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+
+/*end button*/
+
+/*start level*/
+.levels{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 30%;
+    background-color: #008eff;
+    font-family:cursive ;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.levels .easy,
+.levels .normal,
+.levels .hard{
+    width: 90%;
+    background-color: #008eff;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/*end level*/
+
+/*start game over*/
+.game-over{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: red;
+    font-family: fantasy;
+    letter-spacing: 1px;
+}
+/*end game over*/
+
+/*start winner*/
+.winner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--second-color);
+    font-family: fantasy;
+    letter-spacing: 1px;
+}
+/*end winner*/
